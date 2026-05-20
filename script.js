@@ -310,4 +310,146 @@ document.addEventListener("DOMContentLoaded", () => {
             });
         });
     }
+
+    // 11. Hero Section Dynamic Data Science & Coding Canvas Effect
+    const heroCanvas = document.getElementById("hero-canvas");
+    if (heroCanvas) {
+        const ctx = heroCanvas.getContext("2d");
+        let width = (heroCanvas.width = heroCanvas.offsetWidth);
+        let height = (heroCanvas.height = heroCanvas.offsetHeight);
+
+        // Handle resize
+        window.addEventListener("resize", () => {
+            if (heroCanvas) {
+                width = heroCanvas.width = heroCanvas.offsetWidth;
+                height = heroCanvas.height = heroCanvas.offsetHeight;
+            }
+        });
+
+        // Data science nodes (Plexus network)
+        const nodes = [];
+        const numNodes = Math.min(60, Math.floor((width * height) / 15000));
+        
+        for (let i = 0; i < numNodes; i++) {
+            nodes.push({
+                x: Math.random() * width,
+                y: Math.random() * height,
+                vx: (Math.random() - 0.5) * 0.6,
+                vy: (Math.random() - 0.5) * 0.6,
+                radius: Math.random() * 2 + 1
+            });
+        }
+
+        // Floating coding/data science snippets
+        const codeSnippets = [
+            "y = f(x) + ε", "model.fit(X_train, y_train)", "import torch.nn as nn", 
+            "const root = createRoot()", "git commit -m 'deploy'", "npm run dev", 
+            "tf.tensor2d([1, 2, 3, 4])", "df.groupby('category').mean()", "plt.show()", 
+            "01101001 01101110 01110100", "const data = await res.json()", "optimizer.step()",
+            "loss.backward()", "pd.read_csv('data.csv')", "npm install gsap",
+            "await page.evaluate()", "x_hat = D(E(x))", "E = mc²", "O(N log N)", "git push origin main"
+        ];
+        
+        const activeSnippets = [];
+        const numSnippets = 6;
+
+        for (let i = 0; i < numSnippets; i++) {
+            activeSnippets.push({
+                x: Math.random() * (width - 150) + 50,
+                y: Math.random() * (height - 50) + 25,
+                text: codeSnippets[Math.floor(Math.random() * codeSnippets.length)],
+                opacity: Math.random() * 0.4 + 0.45,
+                speed: Math.random() * 0.15 + 0.05,
+                fontSize: Math.floor(Math.random() * 4) + 11 // 11px to 14px
+            });
+        }
+
+        function animate() {
+            ctx.clearRect(0, 0, width, height);
+
+            // 1. Draw Plexus Nodes & Connections (Neural Net)
+            ctx.fillStyle = "rgba(0, 255, 178, 0.7)";
+            
+            // Limit distance for drawing lines
+            const maxDistance = 120;
+
+            // Move and draw nodes
+            for (let i = 0; i < nodes.length; i++) {
+                const n = nodes[i];
+                n.x += n.vx;
+                n.y += n.vy;
+
+                // Bounce off boundaries
+                if (n.x < 0 || n.x > width) n.vx *= -1;
+                if (n.y < 0 || n.y > height) n.vy *= -1;
+
+                // Draw node dot
+                ctx.beginPath();
+                ctx.arc(n.x, n.y, n.radius, 0, Math.PI * 2);
+                ctx.fill();
+
+                // Interactive connection to mouse
+                if (!isTouchDevice && typeof mouse !== 'undefined') {
+                    const canvasRect = heroCanvas.getBoundingClientRect();
+                    const mx = mouse.x - canvasRect.left;
+                    const my = mouse.y - canvasRect.top;
+                    const dMouseX = mx - n.x;
+                    const dMouseY = my - n.y;
+                    const distMouse = Math.sqrt(dMouseX * dMouseX + dMouseY * dMouseY);
+
+                    if (distMouse < 180) {
+                        ctx.beginPath();
+                        ctx.moveTo(n.x, n.y);
+                        ctx.lineTo(mx, my);
+                        ctx.strokeStyle = `rgba(0, 255, 178, ${(1 - distMouse / 180) * 0.35})`;
+                        ctx.stroke();
+                    }
+                }
+
+                // Connections to other nodes
+                for (let j = i + 1; j < nodes.length; j++) {
+                    const n2 = nodes[j];
+                    const dx = n.x - n2.x;
+                    const dy = n.y - n2.y;
+                    const dist = Math.sqrt(dx * dx + dy * dy);
+
+                    if (dist < maxDistance) {
+                        ctx.beginPath();
+                        ctx.moveTo(n.x, n.y);
+                        ctx.lineTo(n2.x, n2.y);
+                        ctx.strokeStyle = `rgba(0, 255, 178, ${(1 - dist / maxDistance) * 0.22})`;
+                        ctx.stroke();
+                    }
+                }
+            }
+
+            // 2. Draw drifting code snippets (Coding)
+            for (let i = 0; i < activeSnippets.length; i++) {
+                const s = activeSnippets[i];
+                ctx.font = `${s.fontSize}px 'JetBrains Mono', monospace`;
+                
+                // Color depends on hovered state of page or default mint
+                const isOrange = document.body.classList.contains("cursor-secondary-hover");
+                const colorHex = isOrange ? "255, 107, 53" : "0, 255, 178";
+                ctx.fillStyle = `rgba(${colorHex}, ${s.opacity})`;
+                
+                ctx.fillText(s.text, s.x, s.y);
+
+                // Move upwards
+                s.y -= s.speed;
+
+                // Recycle snippet when it floats out or fades
+                if (s.y < -10) {
+                    s.y = height + 20;
+                    s.x = Math.random() * (width - 150) + 50;
+                    s.text = codeSnippets[Math.floor(Math.random() * codeSnippets.length)];
+                    s.speed = Math.random() * 0.15 + 0.05;
+                }
+            }
+
+            requestAnimationFrame(animate);
+        }
+
+        animate();
+    }
 });
