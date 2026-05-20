@@ -1,0 +1,726 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pranjay Guleria &mdash; Product Manager &amp; Data Scientist</title>
+    <meta name="description" content="Personal portfolio of Pranjay Guleria, Product Manager and Incoming Data Science Master's student at RMIT Melbourne. Combining product thinking, software engineering, and machine learning.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Serif+Display:ital@0;1&family=JetBrains+Mono:wght@300;400;500;700&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- CSS Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Noise Overlay -->
+    <div class="noise-overlay"></div>
+
+    <!-- Custom Cursor -->
+    <div class="custom-cursor-dot"></div>
+    <div class="custom-cursor-ring"></div>
+
+    <!-- Mobile Hamburger Overlay Navigation -->
+    <div class="mobile-nav-overlay" id="mobileNav">
+        <button class="close-menu-btn" id="closeMenuBtn" aria-label="Close menu">✕</button>
+        <nav class="mobile-nav-links">
+            <a href="#about" class="mobile-link"><span>01</span> ABOUT</a>
+            <a href="#experience" class="mobile-link"><span>02</span> EXPERIENCE</a>
+            <a href="#projects" class="mobile-link"><span>03</span> WORK / PROJECTS</a>
+            <a href="#skills" class="mobile-link"><span>04</span> SKILLS & STACK</a>
+            <a href="#education" class="mobile-link"><span>05</span> EDUCATION</a>
+            <a href="#contact" class="mobile-link"><span>06</span> CONTACT</a>
+        </nav>
+    </div>
+
+    <!-- Navigation Header -->
+    <header class="site-header" id="siteHeader">
+        <div class="header-container">
+            <a href="#hero" class="logo">PRANJAY G.</a>
+            
+            <!-- Desktop Nav Links -->
+            <nav class="desktop-nav">
+                <a href="#about" class="nav-link">About</a>
+                <a href="#experience" class="nav-link">Work</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#skills" class="nav-link">Skills</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </nav>
+            
+            <!-- Mobile Menu Toggle Button -->
+            <button class="menu-toggle-btn" id="menuToggleBtn" aria-label="Open menu">
+                <span class="menu-line"></span>
+                <span class="menu-line"></span>
+            </button>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <!-- [01] HERO SECTION -->
+        <section id="hero" class="hero-section">
+            <div class="animated-grid-lines"></div>
+            <div class="section-container hero-container">
+                <div class="hero-label-wrapper reveal-text">
+                    <span class="hero-label">PRODUCT MANAGER <span class="arrow">→</span> DATA SCIENTIST</span>
+                </div>
+                
+                <h1 class="hero-headline">
+                    <span class="hero-word-line"><span class="hero-word">PRANJAY</span></span>
+                    <span class="hero-word-line"><span class="hero-word">GULERIA</span></span>
+                </h1>
+                
+                <div class="hero-subline-wrapper">
+                    <div class="terminal-text" id="terminalSubline">
+                        <span class="terminal-line"><span class="terminal-prompt">&gt;</span> Building intelligent systems. Shipping real products.</span>
+                        <span class="terminal-line"><span class="terminal-prompt">&gt;</span> Melbourne (incoming) · Delhi · +91 6006907667</span>
+                    </div>
+                </div>
+                
+                <div class="hero-actions">
+                    <a href="#experience" class="btn btn-primary magnetic" id="btnViewWork">
+                        View Work <span class="btn-arrow">↓</span>
+                    </a>
+                    <a href="Profile.pdf" download class="btn btn-secondary magnetic" id="btnDownloadCV">
+                        Download CV
+                    </a>
+                    <a href="https://www.linkedin.com/in/pranjay19" target="_blank" rel="noopener noreferrer" class="btn btn-tertiary magnetic" id="btnLinkedIn">
+                        LinkedIn <span class="btn-arrow-up">↗</span>
+                    </a>
+                </div>
+            </div>
+            <div class="hero-scroll-indicator">
+                <span class="scroll-text">SCROLL TO EXPLORE</span>
+                <span class="scroll-bar"></span>
+            </div>
+        </section>
+
+        <!-- [02] ABOUT SECTION -->
+        <section id="about" class="about-section">
+            <div class="bg-section-number">01</div>
+            <div class="section-container">
+                <div class="section-header">
+                    <span class="section-tag">[01] ABOUT ME</span>
+                </div>
+                
+                <div class="about-grid">
+                    <div class="about-left">
+                        <blockquote class="about-quote">
+                            "From roadmaps to models — I build things that work at scale."
+                        </blockquote>
+                        <div class="about-image-container scroll-reveal">
+                            <div class="about-image-frame">
+                                <img src="pranjay.png" alt="Pranjay Guleria portrait" class="about-portrait">
+                                <div class="about-image-tech-label">SYSTEM_USER: PRANJAY_G</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="about-right">
+                        <div class="about-bio">
+                            <p>Ex-Product Manager at Antino with nearly 3 years shipping products across healthcare, edtech, and EV domains. Incoming Master of Data Science student at RMIT University, Melbourne.</p>
+                            <p>I combine product thinking, software engineering, and machine learning to build impactful, data-driven systems.</p>
+                        </div>
+                        
+                        <div class="terminal-facts">
+                            <div class="terminal-header">
+                                <span class="term-dot"></span>
+                                <span class="term-dot"></span>
+                                <span class="term-dot"></span>
+                                <span class="term-title">system_info.sh</span>
+                            </div>
+                            <div class="terminal-body">
+                                <div class="fact-row">
+                                    <span class="fact-key">LOCATION</span>
+                                    <span class="fact-arrow">→</span>
+                                    <span class="fact-val">Greater Delhi Area</span>
+                                </div>
+                                <div class="fact-row">
+                                    <span class="fact-key">NEXT_BASE</span>
+                                    <span class="fact-arrow">→</span>
+                                    <span class="fact-val">Melbourne, AU (RMIT)</span>
+                                </div>
+                                <div class="fact-row">
+                                    <span class="fact-key">BACKGROUND</span>
+                                    <span class="fact-arrow">→</span>
+                                    <span class="fact-val">B.Tech AI · Bennett Univ.</span>
+                                </div>
+                                <div class="fact-row">
+                                    <span class="fact-key">FOCUS_NOW</span>
+                                    <span class="fact-arrow">→</span>
+                                    <span class="fact-val">ML Systems · FastAPI · MLflow</span>
+                                </div>
+                                <div class="fact-row">
+                                    <span class="fact-key">CONTACT</span>
+                                    <span class="fact-arrow">→</span>
+                                    <span class="fact-val"><a href="mailto:pranjayguleria@gmail.com" class="terminal-link">pranjayguleria@gmail.com</a></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- [03] EXPERIENCE TIMELINE SECTION -->
+        <section id="experience" class="experience-section">
+            <div class="bg-section-number">02</div>
+            <div class="section-container">
+                <div class="section-header">
+                    <span class="section-tag">[02] EXPERIENCE</span>
+                    <h2 class="section-title">Career Timeline</h2>
+                </div>
+
+                <div class="timeline-container">
+                    <!-- SVG Timeline Draw Line -->
+                    <div class="timeline-line-wrapper">
+                        <svg class="timeline-svg" width="6" height="100%" viewBox="0 0 6 1000" preserveAspectRatio="none">
+                            <line class="timeline-line-bg" x1="3" y1="0" x2="3" y2="1000" stroke="#1A2233" stroke-width="4"></line>
+                            <path class="timeline-line-active" d="M 3 0 L 3 1000" fill="none" stroke="#00FFB2" stroke-width="4" stroke-dasharray="1000" stroke-dashoffset="1000"></path>
+                        </svg>
+                    </div>
+
+                    <!-- Timeline Item 1: Antino Product Manager -->
+                    <div class="timeline-item">
+                        <div class="timeline-date">
+                            <span class="timeline-year">Nov 2024 – Apr 2026</span>
+                            <span class="timeline-duration">1 yr 6 mos</span>
+                            <span class="timeline-company">Antino</span>
+                        </div>
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content card scroll-reveal">
+                            <div class="timeline-card-header">
+                                <h3 class="timeline-role">Product Manager</h3>
+                                <span class="timeline-loc">Gurugram</span>
+                            </div>
+                            <ul class="timeline-details">
+                                <li>Led development of India's first integrated GMR EV charging infrastructure for airlines and ground handling at RGI Airport, Hyderabad — 58 GSE charging points across 2,000+ sq. meters, powered entirely by renewable energy. Partners: Celebi & GlobeGround India.</li>
+                                <li>Built the Oakridge School App (Nord Anglia Education Group) — Driver and Permission Slip modules for iOS & Android. Integrated NFC functionality in the Driver module, reducing human error by <strong>35%+</strong>, serving <strong>10,000+ users</strong> across the school franchise.</li>
+                                <li>Built and deployed a Python-based JIRA Analytics & Reporting System on PythonAnywhere — automated KPI tracking for <strong>10+ teams</strong>, reduced manual effort by <strong>~90%</strong> (~10 hrs/week saved). Integrated dynamic charts and automated email reports.</li>
+                                <li>Led full SDLC for <strong>Spare Space</strong> (<a href="http://www.sparespace.co.in" target="_blank" rel="noopener noreferrer">sparespace.co.in</a>) — India's first marketplace for short-term creative space rentals. Architected booking workflows, secure payment integration, dual-interface dashboards for hosts and seekers.</li>
+                            </ul>
+                            <div class="timeline-tags">
+                                <span class="tag">EV Infrastructure</span>
+                                <span class="tag">EdTech</span>
+                                <span class="tag">Marketplace</span>
+                                <span class="tag">Python</span>
+                                <span class="tag">NFC</span>
+                                <span class="tag">JIRA</span>
+                                <span class="tag">KPI Automation</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Timeline Item 2: Antino APM -->
+                    <div class="timeline-item">
+                        <div class="timeline-date">
+                            <span class="timeline-year">Jan 2024 – Nov 2024</span>
+                            <span class="timeline-duration">11 mos</span>
+                            <span class="timeline-company">Antino</span>
+                        </div>
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content card scroll-reveal">
+                            <div class="timeline-card-header">
+                                <h3 class="timeline-role">Associate Product Manager</h3>
+                                <span class="timeline-loc">Gurugram</span>
+                            </div>
+                            <ul class="timeline-details">
+                                <li>Delivered <strong>7 client projects</strong> on-time via Agile (Scrum & Kanban) — cross-functional coordination using JIRA.</li>
+                                <li>Created detailed DFDs and User Flow Diagrams in Miro for improved stakeholder clarity.</li>
+                                <li>Translated requirements from pre-sales calls into comprehensive FRD, BRD, PRD documentation for <strong>10+ projects</strong>.</li>
+                            </ul>
+                            <div class="timeline-tags">
+                                <span class="tag">Agile</span>
+                                <span class="tag">Scrum</span>
+                                <span class="tag">Kanban</span>
+                                <span class="tag">DFDs</span>
+                                <span class="tag">FRD/BRD/PRD</span>
+                                <span class="tag">Miro</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Timeline Item 3: Antino PM Intern -->
+                    <div class="timeline-item">
+                        <div class="timeline-date">
+                            <span class="timeline-year">Jul 2023 – Jan 2024</span>
+                            <span class="timeline-duration">7 mos</span>
+                            <span class="timeline-company">Antino</span>
+                        </div>
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content card scroll-reveal">
+                            <div class="timeline-card-header">
+                                <h3 class="timeline-role">Product Manager Intern</h3>
+                                <span class="timeline-loc">Gurugram</span>
+                            </div>
+                            <ul class="timeline-details">
+                                <li>Gathered requirements from stakeholder pre-sales calls, translated into structured feature lists for timeline and effort estimation.</li>
+                                <li>Created DFDs for <strong>15+ projects</strong> to map out system workflows.</li>
+                                <li>Drafted BRD, PRD, FRD documentation aligned to business objectives.</li>
+                            </ul>
+                            <div class="timeline-tags">
+                                <span class="tag">Requirements Gathering</span>
+                                <span class="tag">Documentation</span>
+                                <span class="tag">Pre-sales</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Timeline Item 4: Cisco Cyber Security Intern -->
+                    <div class="timeline-item">
+                        <div class="timeline-date">
+                            <span class="timeline-year">May 2022 – Jun 2022</span>
+                            <span class="timeline-duration">2 mos</span>
+                            <span class="timeline-company">Cisco</span>
+                        </div>
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content card scroll-reveal">
+                            <div class="timeline-card-header">
+                                <h3 class="timeline-role">Cyber Security Intern</h3>
+                                <span class="timeline-loc">India</span>
+                            </div>
+                            <ul class="timeline-details">
+                                <li>Engaged in network security evaluations and basic security operations.</li>
+                                <li>Learned foundational concepts of cybersecurity, encryption protocols, and Cisco security suites.</li>
+                            </ul>
+                            <div class="timeline-tags">
+                                <span class="tag">Cyber Security</span>
+                                <span class="tag">Network Security</span>
+                                <span class="tag">Essentials</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- [04] FEATURED PROJECTS SECTION -->
+        <section id="projects" class="projects-section">
+            <div class="bg-section-number">03</div>
+            <div class="section-container">
+                <div class="section-header">
+                    <span class="section-tag">[03] PORTFOLIO</span>
+                    <h2 class="section-title">Featured Projects</h2>
+                </div>
+
+                <div class="projects-grid">
+                    <!-- Project 1 -->
+                    <div class="project-card card scroll-reveal">
+                        <div class="project-num">01</div>
+                        <div class="project-body">
+                            <span class="project-highlight">India's First Airport EV System</span>
+                            <h3 class="project-name">GMR EV Charging Infrastructure</h3>
+                            <p class="project-desc">Real-time monitoring and predictive maintenance for 58 GSE charging points across 2,000+ sq. meters at RGI Airport, Hyderabad. Fully powered by renewable energy.</p>
+                            <div class="project-meta">
+                                <strong>Partners:</strong> Celebi Aviation, GlobeGround India<br>
+                                <strong>Impact:</strong> Operational-scale EV infra for airline ground handling
+                            </div>
+                            <div class="project-tags">
+                                <span>EV</span>
+                                <span>IoT</span>
+                                <span>Predictive Maintenance</span>
+                                <span>Real-time Systems</span>
+                                <span>Renewable Energy</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 2 -->
+                    <div class="project-card card scroll-reveal">
+                        <div class="project-num">02</div>
+                        <div class="project-body">
+                            <span class="project-highlight">Nord Anglia Education Group · 10,000+ Users</span>
+                            <h3 class="project-name">Oakridge School App — NFC Driver Module</h3>
+                            <p class="project-desc">End-to-end iOS & Android app covering Driver and Permission Slip modules. NFC integration in the Driver module cut human error rates by over 35%.</p>
+                            <div class="project-tags">
+                                <span>Mobile</span>
+                                <span>iOS</span>
+                                <span>Android</span>
+                                <span>NFC</span>
+                                <span>EdTech</span>
+                                <span>UX</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 3 -->
+                    <div class="project-card card scroll-reveal">
+                        <div class="project-num">03</div>
+                        <div class="project-body">
+                            <span class="project-highlight">Python · PythonAnywhere · 10+ Teams</span>
+                            <h3 class="project-name">JIRA Analytics & Reporting System</h3>
+                            <p class="project-desc">Automated KPI tracking system with dynamic charts, real-time time-tracking, and automated email reports for engineering and product teams. Reduced manual reporting effort by ~90%.</p>
+                            <div class="project-tags">
+                                <span>Python</span>
+                                <span>JIRA API</span>
+                                <span>Automation</span>
+                                <span>KPI</span>
+                                <span>Data Engineering</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 4 -->
+                    <div class="project-card card scroll-reveal">
+                        <div class="project-num">04</div>
+                        <div class="project-body">
+                            <span class="project-highlight">India's First Short-Term Creative Space Marketplace</span>
+                            <h3 class="project-name">Spare Space</h3>
+                            <p class="project-desc">Full SDLC ownership. Marketplace connecting space owners with 10+ creator categories (photographers, fitness instructors, corporate teams). Secure payments, dual-interface dashboards.</p>
+                            <div class="project-link-wrapper">
+                                <a href="http://www.sparespace.co.in" target="_blank" rel="noopener noreferrer" class="project-link-btn">
+                                    sparespace.co.in <span class="arrow-up">↗</span>
+                                </a>
+                            </div>
+                            <div class="project-tags">
+                                <span>Marketplace</span>
+                                <span>Full Stack</span>
+                                <span>Product</span>
+                                <span>Payments</span>
+                                <span>SDLC</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- [05] SKILLS & STACK SECTION -->
+        <section id="skills" class="skills-section">
+            <div class="bg-section-number">04</div>
+            <div class="section-container">
+                <div class="section-header">
+                    <span class="section-tag">[04] EXPERTISE</span>
+                    <h2 class="section-title">Skills &amp; Technologies</h2>
+                </div>
+
+                <div class="skills-grid">
+                    <!-- Column 1: Product & Management -->
+                    <div class="skills-block card scroll-reveal">
+                        <h3 class="skills-block-title">Product &amp; Management</h3>
+                        <div class="skills-list">
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">Agile / Scrum / Kanban</span>
+                                    <span class="skill-percentage">90%</span>
+                                </div>
+                                <div class="skill-bar-outer">
+                                    <div class="skill-bar-inner" data-target="90%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">Stakeholder Management</span>
+                                    <span class="skill-percentage">85%</span>
+                                </div>
+                                <div class="skill-bar-outer">
+                                    <div class="skill-bar-inner" data-target="85%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">Product Documentation (FRD/BRD)</span>
+                                    <span class="skill-percentage">88%</span>
+                                </div>
+                                <div class="skill-bar-outer">
+                                    <div class="skill-bar-inner" data-target="88%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">JIRA / Miro / FigJam</span>
+                                    <span class="skill-percentage">90%</span>
+                                </div>
+                                <div class="skill-bar-outer">
+                                    <div class="skill-bar-inner" data-target="90%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">SDLC Ownership</span>
+                                    <span class="skill-percentage">88%</span>
+                                </div>
+                                <div class="skill-bar-outer">
+                                    <div class="skill-bar-inner" data-target="88%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Column 2: Data & Engineering -->
+                    <div class="skills-block card scroll-reveal">
+                        <h3 class="skills-block-title">Data &amp; Engineering</h3>
+                        <div class="skills-list">
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">Python</span>
+                                    <span class="skill-percentage">85%</span>
+                                </div>
+                                <div class="skill-bar-outer">
+                                    <div class="skill-bar-inner" data-target="85%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">SQL</span>
+                                    <span class="skill-percentage">80%</span>
+                                </div>
+                                <div class="skill-bar-outer">
+                                    <div class="skill-bar-inner" data-target="80%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">Power BI</span>
+                                    <span class="skill-percentage">75%</span>
+                                </div>
+                                <div class="skill-bar-outer">
+                                    <div class="skill-bar-inner" data-target="75%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">EDA / Data Wrangling</span>
+                                    <span class="skill-percentage">85%</span>
+                                </div>
+                                <div class="skill-bar-outer">
+                                    <div class="skill-bar-inner" data-target="85%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">Machine Learning</span>
+                                    <span class="skill-percentage">70%</span>
+                                </div>
+                                <div class="skill-bar-outer">
+                                    <div class="skill-bar-inner" data-target="70%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">FastAPI / Streamlit / MLflow</span>
+                                    <span class="skill-percentage">65%</span>
+                                </div>
+                                <div class="skill-bar-outer">
+                                    <div class="skill-bar-inner" data-target="65%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">Full Stack Development</span>
+                                    <span class="skill-percentage">80%</span>
+                                </div>
+                                <div class="skill-bar-outer">
+                                    <div class="skill-bar-inner" data-target="80%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tech Stack tags -->
+                <div class="stack-box card scroll-reveal">
+                    <h3 class="stack-box-title">Tech Stack Core</h3>
+                    <div class="stack-tags-grid">
+                        <span class="stack-tag-badge">Python</span>
+                        <span class="stack-tag-badge">SQL</span>
+                        <span class="stack-tag-badge">Power BI</span>
+                        <span class="stack-tag-badge">FastAPI</span>
+                        <span class="stack-tag-badge">Streamlit</span>
+                        <span class="stack-tag-badge">MLflow</span>
+                        <span class="stack-tag-badge">JIRA</span>
+                        <span class="stack-tag-badge">Miro</span>
+                        <span class="stack-tag-badge">FigJam</span>
+                        <span class="stack-tag-badge">AWS</span>
+                        <span class="stack-tag-badge">HTML/CSS</span>
+                        <span class="stack-tag-badge">JavaScript</span>
+                        <span class="stack-tag-badge">Git</span>
+                        <span class="stack-tag-badge">PythonAnywhere</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- [05-A] TESTIMONIAL SECTION (Recommendations) -->
+        <section id="testimonial" class="testimonial-section">
+            <div class="bg-section-number">05</div>
+            <div class="section-container testimonial-container">
+                <!-- Large background quotation marks -->
+                <div class="bg-quote-mark">“</div>
+                
+                <div class="testimonial-wrapper card scroll-reveal">
+                    <div class="testimonial-content">
+                        <p class="testimonial-quote">
+                            "A dependable, thoughtful, and execution-driven Product Manager. I'd strongly recommend Pranjay to any team building from the ground up."
+                        </p>
+                    </div>
+                    
+                    <div class="testimonial-author-box">
+                        <div class="avatar-wrapper">
+                            <img src="khayat_avatar.png" alt="Khayat Chakerverty Profile" class="author-avatar">
+                        </div>
+                        <div class="author-details">
+                            <div class="author-identity">
+                                <h4 class="author-name">Khayat Chakerverty</h4>
+                                <a href="https://www.linkedin.com/in/khayat-chakerverty-49453213a/" target="_blank" rel="noopener noreferrer" class="linkedin-icon-link" aria-label="Khayat LinkedIn">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                                    </svg>
+                                </a>
+                            </div>
+                            <span class="author-role">Founder, Spare Space</span>
+                            <span class="testimonial-meta">Worked with Pranjay as client / collaborator · January 2026</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- [06] EDUCATION SECTION -->
+        <section id="education" class="education-section">
+            <div class="bg-section-number">06</div>
+            <div class="section-container">
+                <div class="section-header">
+                    <span class="section-tag">[05] EDUCATION</span>
+                    <h2 class="section-title">Academic Background</h2>
+                </div>
+
+                <div class="education-grid">
+                    <!-- RMIT Card -->
+                    <div class="education-card card scroll-reveal">
+                        <div class="edu-header">
+                            <span class="edu-status">INCOMING</span>
+                            <span class="edu-period">2026 → Present</span>
+                        </div>
+                        <h3 class="edu-degree">Master of Data Science</h3>
+                        <h4 class="edu-school">RMIT University</h4>
+                        <span class="edu-location">Melbourne, Australia</span>
+                    </div>
+
+                    <!-- Bennett Card -->
+                    <div class="education-card card scroll-reveal">
+                        <div class="edu-header">
+                            <span class="edu-status">COMPLETED</span>
+                            <span class="edu-period">2020 → 2024</span>
+                        </div>
+                        <h3 class="edu-degree">B.Tech — Artificial Intelligence</h3>
+                        <h4 class="edu-school">Bennett University</h4>
+                        <span class="edu-location">Greater Noida, India</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- [07] CERTIFICATIONS SECTION -->
+        <section id="certifications" class="certifications-section">
+            <div class="bg-section-number">07</div>
+            <div class="section-container">
+                <div class="section-header">
+                    <span class="section-tag">[06] RECOGNITION</span>
+                    <h2 class="section-title">Certifications</h2>
+                </div>
+
+                <div class="certifications-table-wrapper card scroll-reveal">
+                    <table class="certifications-table">
+                        <thead>
+                            <tr>
+                                <th>Certificate Name</th>
+                                <th>Issuer</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="cert-name">AWS Academy Graduate — ML Foundations</td>
+                                <td class="cert-issuer">Amazon Web Services</td>
+                            </tr>
+                            <tr>
+                                <td class="cert-name">Cybersecurity Essentials</td>
+                                <td class="cert-issuer">Cisco</td>
+                            </tr>
+                            <tr>
+                                <td class="cert-name">Python for Data Science and AI</td>
+                                <td class="cert-issuer">IBM / Coursera</td>
+                            </tr>
+                            <tr>
+                                <td class="cert-name">The Complete 2022 Web Development Bootcamp</td>
+                                <td class="cert-issuer">Udemy</td>
+                            </tr>
+                            <tr>
+                                <td class="cert-name">Introduction to Cybersecurity</td>
+                                <td class="cert-issuer">Cisco</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- [08] CONTACT SECTION -->
+        <section id="contact" class="contact-section">
+            <div class="bg-section-number">08</div>
+            <div class="section-container">
+                <div class="section-header">
+                    <span class="section-tag">[07] INQUIRIES</span>
+                </div>
+
+                <div class="contact-grid">
+                    <div class="contact-left scroll-reveal">
+                        <h2 class="contact-title-huge">
+                            LET'S<br>BUILD<br><span class="accent-text">SOMETHING.</span>
+                        </h2>
+                        
+                        <div class="contact-cta-btn-wrapper">
+                            <a href="mailto:pranjayguleria@gmail.com" class="btn btn-primary btn-huge magnetic" id="btnContactCTA">
+                                Say Hello <span class="btn-arrow-right">→</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="contact-right scroll-reveal">
+                        <div class="contact-details-box card">
+                            <div class="contact-detail-item">
+                                <span class="detail-label">EMAIL</span>
+                                <span class="detail-arrow">→</span>
+                                <a href="mailto:pranjayguleria@gmail.com" class="detail-value">pranjayguleria@gmail.com</a>
+                            </div>
+                            <div class="contact-detail-item">
+                                <span class="detail-label">PHONE</span>
+                                <span class="detail-arrow">→</span>
+                                <a href="tel:+916006907667" class="detail-value">+91 6006907667</a>
+                            </div>
+                            <div class="contact-detail-item">
+                                <span class="detail-label">LINKEDIN</span>
+                                <span class="detail-arrow">→</span>
+                                <a href="https://linkedin.com/in/pranjay19" target="_blank" rel="noopener noreferrer" class="detail-value">linkedin.com/in/pranjay19</a>
+                            </div>
+                            <div class="contact-detail-item">
+                                <span class="detail-label">LOCATION</span>
+                                <span class="detail-arrow">→</span>
+                                <span class="detail-value">Delhi Area <span class="location-arrow">→</span> Melbourne</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-left">
+                <p class="footer-tagline">Designed for humans. Built for scale.</p>
+            </div>
+            <div class="footer-right">
+                <span class="copyright">© 2026 Pranjay Guleria. All rights reserved.</span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- GSAP Core and ScrollTrigger Plugins -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    
+    <!-- Script Logic -->
+    <script src="script.js"></script>
+</body>
+</html>
