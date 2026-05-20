@@ -46,6 +46,10 @@ document.addEventListener("DOMContentLoaded", () => {
             mouse.y = e.clientY;
             setCursorX(mouse.x);
             setCursorY(mouse.y);
+            
+            // Update CSS variables for interactive background glow
+            document.documentElement.style.setProperty('--mouse-x', `${mouse.x}px`);
+            document.documentElement.style.setProperty('--mouse-y', `${mouse.y}px`);
         });
 
         // Sluggish trailing effect for the outer ring using GSAP ticker
