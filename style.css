@@ -1702,6 +1702,31 @@ strong {
         font-size: clamp(2.5rem, 12vw, 4.8rem);
         margin-bottom: 2.5rem;
     }
+
+    .contact-details-box {
+        padding: 1.5rem !important;
+    }
+    
+    .contact-detail-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.4rem;
+        padding: 1.2rem 0;
+    }
+    
+    .detail-arrow {
+        display: none;
+    }
+    
+    .detail-label {
+        width: auto;
+        font-size: 0.7rem;
+    }
+    
+    .detail-value {
+        font-size: 0.95rem;
+        word-break: break-all;
+    }
     
     .footer-container {
         flex-direction: column;
