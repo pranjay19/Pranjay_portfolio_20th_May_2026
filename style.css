@@ -111,18 +111,18 @@ body {
     width: 100%;
     height: 100%;
     background: radial-gradient(
-        800px circle at var(--mouse-x, 50%) var(--mouse-y, 50%),
-        rgba(0, 255, 178, 0.045),
-        transparent 80%
+        900px circle at var(--mouse-x, 50%) var(--mouse-y, 50%),
+        rgba(0, 255, 178, 0.13),
+        transparent 75%
     );
-    transition: background 0.4s ease;
+    transition: background 0.3s ease;
 }
 
 body.cursor-secondary-hover .bg-spotlight {
     background: radial-gradient(
-        800px circle at var(--mouse-x, 50%) var(--mouse-y, 50%),
-        rgba(255, 107, 53, 0.045),
-        transparent 80%
+        900px circle at var(--mouse-x, 50%) var(--mouse-y, 50%),
+        rgba(255, 107, 53, 0.13),
+        transparent 75%
     );
 }
 
@@ -201,6 +201,9 @@ section {
     position: relative;
     border-bottom: 1px solid var(--border-color);
     overflow: hidden;
+    z-index: 2;
+    /* More transparent so global plexus canvas shows through strongly */
+    background-color: rgba(8, 10, 15, 0.60);
 }
 
 .card {
@@ -517,15 +520,16 @@ strong {
     z-index: 2;
 }
 
-.hero-canvas {
-    position: absolute;
+/* --- Global Plexus Canvas (Full Page) --- */
+#global-plexus-canvas {
+    position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
     z-index: 1;
     pointer-events: none;
-    opacity: 0.38;
+    opacity: 0.90;
 }
 
 .hero-label-wrapper {
